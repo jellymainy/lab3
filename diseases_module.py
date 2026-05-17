@@ -91,3 +91,52 @@ class DiseasesModule:
                 years[-1] + 1 + steps
             )
         )
+
+        all_years = years + future_years
+
+        for column, label in infections.items():
+
+            values = self.data[column].tolist()
+
+            forecast = moving_average_forecast(
+                values,
+                window,
+                steps
+            )
+
+            # факт
+            plt.plot(
+                years,
+                values,
+                marker='o',
+                linewidth=2,
+                label=f"{label} (факт)"
+            )
+
+            # прогноз
+            plt.plot(
+                [years[-1]] + future_years,
+                [values[-1]] + forecast,
+                marker='o',
+                linestyle='--',
+                linewidth=2,
+                label=f"{label} (прогноз)"
+            )
+
+        plt.title(
+            "Инфекционные заболевания и прогноз"
+        )
+
+        plt.xlabel("Год")
+
+        plt.ylabel("Количество случаев")
+
+        plt.legend()
+
+        plt.grid(True)
+
+        plt.xticks(all_years, rotation=45)
+
+        plt.tight_layout()
+
+        plt.show()
