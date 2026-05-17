@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from services.forecast_service import moving_average_forecast
+from forecast_service import moving_average_forecast
 
 class DiseasesModule:
 
