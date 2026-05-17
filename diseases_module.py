@@ -19,7 +19,7 @@ class DiseasesModule:
 
         print(self.data.to_string(index=False))
 
-    # ---------------------------------
+    # Что ты здесь анализируешь?
 
     def analyze(self):
 
