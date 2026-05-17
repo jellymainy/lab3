@@ -146,7 +146,7 @@ moving_average_forecast(values, window, steps)
 
 Если у вас возникли вопросы или предложения по улучшению проекта:
  
-- **Email:** gosham2007@gamil.com  
+- **Email:** gosham2007@gmail.com  
 - **Telegram:** https://t.me/dfgd
 
 Спасибо за использование Lab3TP!
