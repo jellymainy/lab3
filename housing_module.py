@@ -1,3 +1,4 @@
+# Где csv файл?
 import pandas as pd
 import matplotlib.pyplot as plt
 
