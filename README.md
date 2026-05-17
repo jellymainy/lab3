@@ -140,6 +140,7 @@ CSV-файл `diseases.csv` содержит:
 
 ```python
 moving_average_forecast(values, window, steps)
+```
 
 # Контакты
 
