@@ -140,3 +140,12 @@ CSV-файл `diseases.csv` содержит:
 
 ```python
 moving_average_forecast(values, window, steps)
+
+# Контакты
+
+Если у вас возникли вопросы или предложения по улучшению проекта:
+ 
+- **Email:** gosham2007@gamil.com  
+- **Telegram:** https://t.me/dfgd
+
+Спасибо за использование Lab3TP!
