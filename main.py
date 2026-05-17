@@ -1,6 +1,6 @@
-from modules.marriages_module import MarriagesModule
-from modules.housing_module import HousingModule
-from modules.diseases_module import DiseasesModule
+from marriages_module import MarriagesModule
+from housing_module import HousingModule
+from diseases_module import DiseasesModule
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -74,4 +74,5 @@ def main():
 
             print("Неверный выбор")
 
-
+if __name__ == "__main__":
+    main()
