@@ -49,3 +49,25 @@ class MarriagesModule:
         plt.xticks(all_years, rotation=45)
         plt.tight_layout()
         plt.show()
+        
+    def build_divorces_graph(self, window=3, steps=5):
+        years = self.data["year"].tolist()
+        values = self.data["divorces_total"].tolist()
+        
+        forecast = moving_average_forecast(values, window, steps)
+        future_years = list(range(years[-1] + 1, years[-1] + 1 + steps))
+        all_years = years + future_years
+        
+        plt.figure(figsize=(12, 6))
+        # факт
+        plt.plot(years, values, marker='o', linewidth=2, label='Разводы (факт)')
+        # прогноз
+        plt.plot([years[-1]] + future_years, [values[-1]] + forecast, marker='o', linestyle='--', linewidth=2, label='Разводы (прогноз)')
+        plt.title("Разводы в России")
+        plt.xlabel("Год")
+        plt.ylabel("Количество")
+        plt.legend()
+        plt.grid(True)
+        plt.xticks(all_years, rotation=45)
+        plt.tight_layout()
+        plt.show()
