@@ -15,9 +15,7 @@ def main():
         print("3 - Заболевания")
         print("4 - Выйти")
 
-        choice = input(
-            "Выберите модуль: "
-        )
+        choice = input("Выберите модуль: ")
 
         # ---------------------------------
 
@@ -25,9 +23,7 @@ def main():
 
             module = MarriagesModule()
 
-            module.load_data(
-                "marriages.csv"
-            )
+            module.load_data("marriages.csv")
 
             module.show_statistics()
 
@@ -35,19 +31,21 @@ def main():
 
             module.build_divorces_graph()
 
+            print("\n")
+
         # ---------------------------------
 
         elif choice == "2":
 
             module = HousingModule()
 
-            module.load_data(
-                "housing.csv"
-            )
+            module.load_data("housing.csv")
 
             module.calculate_changes()
 
             module.build_graph()
+
+            print("\n")
 
         # ---------------------------------
 
@@ -55,13 +53,13 @@ def main():
 
             module = DiseasesModule()
 
-            module.load_data(
-                "diseases.csv"
-            )
+            module.load_data("diseases.csv")
 
             module.analyze()
 
             module.build_graph()
+            
+            print("\n")
         
         # ---------------------------------
         
@@ -73,6 +71,7 @@ def main():
         else:
 
             print("Неверный выбор")
+            print("\n")
 
 if __name__ == "__main__":
     main()
