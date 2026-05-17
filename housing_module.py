@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Импортируем функцию прогнозирования скользящим средним из внешнего сервиса
 from services.forecast_service import moving_average_forecast
 
 class HousingModule:
