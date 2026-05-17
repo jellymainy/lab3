@@ -11,6 +11,8 @@ class HousingModule:
         self.data = None
 
     # ---------------------------------
+    # ЗАГРУЗКА ДАННЫХ
+    # ---------------------------------
 
     def load_data(self, path):
 
@@ -21,7 +23,8 @@ class HousingModule:
         print(self.data.to_string(index=False))
 
     # ---------------------------------
-
+    # РАСЧЁТ ИЗМЕНЕНИЙ (АНАЛИЗ)
+    # ---------------------------------
     def calculate_changes(self):
 
         print("\n=== АНАЛИЗ ===")
